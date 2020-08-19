@@ -11,7 +11,7 @@ import {AuthService} from '../../_service/auth-service';
   styleUrls: ['./login-reg.component.css']
 })
 export class LoginRegComponent implements OnInit {
-  backend="http://ciromanfredi96.pythonanywhere.com"
+  backend="https://ciromanfredi96.pythonanywhere.com"
 
   logForm = new FormGroup({
     email:new FormControl("", [
