@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'angular-heroku';
+  title = 'my-app';
 
   constructor(private router:Router){}
 
