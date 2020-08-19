@@ -21,7 +21,7 @@ export class UploadService {
         let headers = {
             'Cache-Control': 'no-cache',
             'Cache-Content-Type': 'application/json',
-            'authentication_token': this.Auth.getAuthenticationToken()
+            'Authentication-Token': this.Auth.getAuthenticationToken()
           }
         let storageRef = firebase.storage().ref();
         this.uploadTask = storageRef.child(this.basePath+'/'+upload.path).put(upload.file);
