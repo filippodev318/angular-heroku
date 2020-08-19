@@ -47,7 +47,7 @@ export class ProfileComponent implements OnInit {
     console.log('id:'+this.Auth.getId().toString())
     this.uploadService.percentuale.subscribe({
       next: (event:string) => {
-          console.log('Received message jhygvfcdxsza',event);
+          //console.log('Received message jhygvfcdxsza',event);
           this.percentuale=+event;
       }
     })

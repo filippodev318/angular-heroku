@@ -12,7 +12,7 @@ export class UploadService {
     private basePath: string = '/upload';
     private uploadTask: firebase.storage.UploadTask;
     public percentuale: EventEmitter<string> = new EventEmitter<string>();
-    backend="http://93.55.184.20:5000"
+    backend="https://ciromanfredi96.pythonanywhere.com"
     constructor(private Auth: AuthService, private http: HttpClient, private snackBar:MatSnackBar) {  }
 
 

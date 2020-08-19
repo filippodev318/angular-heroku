@@ -12,7 +12,7 @@ export class AppComponent implements OnInit{
   constructor(private router:Router){}
 
   ngOnInit(): void {
-    console.log("vfhnjdcsxmkz")
+    //console.log("vfhnjdcsxmkz")
     this.router.navigate(['home'])
   }
 
