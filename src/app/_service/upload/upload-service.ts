@@ -5,7 +5,6 @@ import { AuthService } from '../auth-service';
 import {HttpClient} from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-
 @Injectable()
 export class UploadService {
 
