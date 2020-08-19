@@ -1,0 +1,17 @@
+.immagine{
+    margin-top: 2%;
+}
+
+.testo{
+    margin-top: 2%;
+    color: white;
+    text-align: -webkit-center;
+    font-size: 30px;
+}
+
+.info{
+    text-align: -webkit-center;
+    margin-top: 2%;
+    font-size: 20px;
+    color: white;
+}

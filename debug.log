@@ -1,0 +1,5 @@
+[0807/095051.445:ERROR:process_reader_win.cc(151)] SuspendThread: Accesso negato. (0x5)
+[0807/095051.447:ERROR:exception_snapshot_win.cc(98)] thread ID 1476 not found in process
+[0807/095345.011:ERROR:process_reader_win.cc(151)] SuspendThread: Accesso negato. (0x5)
+[0807/095345.011:ERROR:exception_snapshot_win.cc(98)] thread ID 7360 not found in process
+[0807/095345.011:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentativo di accesso a un processo in fase di chiusura. (0xc000010a)

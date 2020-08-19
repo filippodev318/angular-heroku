@@ -1,0 +1,96 @@
+<div class="cards">
+<mat-card class="create-event-card">
+
+  <div class="center-content">
+    <mat-card-content>
+      <mat-label class="posLabel">Informazioni sull'evento</mat-label>
+    </mat-card-content>
+  </div>
+
+<form [formGroup]="eventForm">
+
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="nome">
+    <mat-icon matSuffix>event</mat-icon>
+    <mat-hint>Dai un nome all'evento</mat-hint>
+    <mat-error>{{eventNameErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>Numero di partecipanti</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="numerodipartecipanti" type="number" min="2" max="100" onKeyUp="if(this.value>100){this.value='100';}else if(this.value<2){this.value='2';}">
+    <mat-icon matSuffix>group</mat-icon>
+    <mat-hint>Indica il numero di partecipanti</mat-hint>
+    <mat-error>{{numPartecipantiErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>Prezzo</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="prezzo" type="number" min="0.00" max="100.00" step="0.01" pattern="^\d*(\.\d{0,2})?$" onKeyUp="if(this.value>100){this.value='100';}else if(this.value<0){this.value='0';}">
+    <mat-icon matSuffix>euro_symbol</mat-icon>
+    <mat-hint>Costo della partita</mat-hint>
+    <mat-error>{{prezzoErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>Sport</mat-label>
+    <mat-select formControlName="sport">
+      <mat-option value="Calcio">Calcio</mat-option>
+      <mat-option value="Basket">Basket</mat-option>
+      <mat-option value="Tennis">Tennis</mat-option>
+      <mat-option value="Corsa">Corsa</mat-option>
+    </mat-select>
+    <mat-error>{{sportErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+<mat-form-field class="example-full-width" aspect="standard" > 
+  <mat-label> Scegli una data </mat-label> 
+  <input matInput [min]="minDate" [matDatepicker]="picker" formControlName="data"> 
+  <mat-datepicker-toggle class="example-full-width" matSuffix [for]="picker"></mat-datepicker-toggle> 
+  <mat-datepicker #picker > </mat-datepicker> 
+</mat-form-field>
+
+<div class="time">
+  <mat-label> Orario </mat-label>
+<ngb-timepicker formControlName="time"></ngb-timepicker>
+<hr>
+</div>
+
+
+
+<button mat-raised-button class="example-full-width" color="primary" (click)="creaEvento()">Crea evento</button>
+</form>
+</mat-card>
+
+<mat-card class="map">
+  <div class="center-content">
+    <mat-card-content>
+      <mat-label class="posLabel">Dove si terrà l'evento?</mat-label>
+    </mat-card-content>
+  </div>
+<agm-map 
+        [latitude]="lat" 
+        [longitude]="lng"
+        (mapClick)="mapClicked($event)"
+        >
+
+        <agm-marker 
+          [latitude]="evento.latitudine"
+          [longitude]="evento.longitudine"
+          [markerDraggable]="true"
+          [visible]="evento.visible"
+          (dragEnd)="markerDragEnd($event)"
+        >  
+        </agm-marker>
+
+</agm-map>
+<button mat-raised-button class="example-full-width" color="primary" (click)="nolocation()">Non conosco la posizione</button>
+</mat-card>
+</div>
+
+
+
+
+

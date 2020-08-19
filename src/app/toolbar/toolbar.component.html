@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <span class="spacer-elem"></span>
+    <a routerLink="/events" routerLinkActive="active">Events</a>
+    <span class="spacer-elem"></span>
+    <a routerLink="/aroundme" routerLinkActive="active">AroundMe</a>
+    <span class="spacer-elem"></span>
+    <a routerLink="/login_reg" routerLinkActive="active" *ngIf="!isLoggedIn$">Login/SignUp</a>
+    <!--routerLink="/profile" routerLinkActive="active"-->
+   
+    <button mat-button *ngIf="isLoggedIn$" [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/profile">Profile</button>
+        <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+    
+    <!--<a routerLink="/profile" routerLinkActive="active" *ngIf="isLoggedIn$">Profile</a>
+    <a (click)="logout()" routerLinkActive="active" *ngIf="isLoggedIn$">Logout</a>-->
+</mat-toolbar>

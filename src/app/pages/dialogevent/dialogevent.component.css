@@ -1,0 +1,45 @@
+agm-map {
+    width: 1000px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+  }
+
+img{
+    border-radius: 50%;
+    width:150px;
+    height: 150px;
+}
+
+mat-label{
+    font-size: 22px;
+  }
+
+.dialog{
+  width: 1000px;
+  height: 750px;
+}
+
+md-dialog-container {
+  background-color: #000;
+  width: 250px;
+  height: 250px
+}
+
+.maps{
+  margin-top: 20px;
+  text-align: -webkit-center ;
+}
+
+.lista_partecipanti{
+  display: flex;
+  flex-direction: row;
+}
+
+.item{
+  margin: auto;
+}
+
+li{
+  list-style-type: none;
+}

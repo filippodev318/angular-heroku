@@ -1,0 +1,101 @@
+<div class="center-content">
+    <mat-card class="card-auth">
+      <mat-card-header>
+        <mat-card-title>Login/Register</mat-card-title>
+        <mat-card-subtitle>SportAppenz</mat-card-subtitle>
+      </mat-card-header>
+
+      <!-- LOGIN CARD -->
+
+      <mat-card-content>
+        <mat-tab-group>
+          <mat-tab label="Login">
+            <form [formGroup]="logForm">
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput placeholder="Email" value="" formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+              <mat-error>{{emailErrorMessage()}}</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Password" formControlName="password" required>
+              <mat-error>{{pwdErrorMessage()}}</mat-error>
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <a class=password (click)="resetPassword(logForm)">Password dimenticata</a>
+            <button mat-button color="primary" (click)="login(logForm)">Login</button>
+          </form>
+          
+          </mat-tab>
+
+          <!-- REGISTER CARD -->
+          
+          <mat-tab label="Registrati">
+            <form [formGroup]="regForm">
+            <mat-form-field class="example-full-width" style="width: 100%">
+              <input matInput placeholder="Name" formControlName="nome" required>
+              <mat-error>{{nameErrorMessage()}}</mat-error>
+            <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Cognome</mat-label>
+              <input type="cognome" matInput placeholder="Cognome" formControlName="cognome" required>
+              <mat-error>{{cognomeErrorMessage()}}</mat-error>
+              <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Username</mat-label>
+                <input type="username" matInput placeholder="username" value="" formControlName="username" required minlength="4">
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-error>{{usernameErrorMessage()}}</mat-error>
+              </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Password" value="" formControlName="password" required minlength="6">
+              <mat-error>{{pwdErrorMessage()}}</mat-error>
+              <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput placeholder="Email" formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+              <mat-icon matSuffix>email</mat-icon>
+              <mat-error>{{emailErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Città</mat-label>
+              <input type="Citta" matInput placeholder="Citta" value="" formControlName="citta">
+              <mat-icon matSuffix>location_city</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Telefono</mat-label>
+              <input type="Telefono" matInput placeholder="Telefono" value="" formControlName="telefono" pattern="[0-9 ]{10}">
+              <mat-error>{{phoneErrorMessage()}}</mat-error>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+            
+            <button mat-button color="primary" (click)="register(regForm)">Registrati</button>
+          </form>
+          </mat-tab>
+        </mat-tab-group>
+  
+      </mat-card-content>
+  
+    </mat-card>
+  </div><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>
