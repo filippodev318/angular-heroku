@@ -20,7 +20,7 @@ export class CreateeventComponent implements OnInit {
   time = {hour: 13, minute: 30};
 
   evento: any = {};
-  backend="http://93.55.184.20:5000"
+  backend="https://ciromanfredi96.pythonanywhere.com"
 
 
   eventForm = new FormGroup({

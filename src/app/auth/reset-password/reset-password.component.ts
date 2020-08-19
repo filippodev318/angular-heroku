@@ -41,7 +41,7 @@ export class ResetPasswordComponent implements OnInit {
       'password_confirm' : this.resetForm.get('nuovaPassword').value
     };
 
-    this.http.post("http://127.0.0.1:5000/reset/"+this.token, formPost).toPromise().then((data: any) => {
+    this.http.post("https://ciromanfredi96.pythonanywhere.com"+this.token, formPost).toPromise().then((data: any) => {
       console.log(data);
       console.log("Password cambiata con successo");
       this.router.navigate(['/login-reg']);

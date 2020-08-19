@@ -15,7 +15,7 @@ export class AroundmeComponent implements OnInit  {
   lat: number = 40.514680;
   lng: number = 14.163612;
   cards=[]
-  backend="http://93.55.184.20:5000"
+  backend="https://ciromanfredi96.pythonanywhere.com"
 
   constructor(private http:HttpClient) { }
 

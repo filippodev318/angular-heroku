@@ -21,7 +21,7 @@ export class EventsComponent implements OnInit {
   id_user= -1;
   isLoggedIn$: boolean;
   sport=['Calcio','Tennis','Basket','Jogging'];
-  backend="http://93.55.184.20:5000"
+  backend="https://ciromanfredi96.pythonanywhere.com"
 
   constructor(private Auth: AuthService, private http: HttpClient, private snackBar: MatSnackBar, public datePipe: DatePipe, public dialog: MatDialog) {
     this.Auth.onLoggedInStatus.subscribe({
