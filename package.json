@@ -7,11 +7,18 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --output-path angularapp  --aot --prod"
+  },
+  "engines": {
+    "node": "v8.11.4",
+    "npm": "5.8.0"
   },
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0",
+    "@angular/cli": "^10.0.6",
+    "@angular/compiler-cli": "^10.0.10",
     "@angular/animations": "~10.0.10",
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~10.0.10",
@@ -30,7 +37,8 @@
     "firebase": "^7.17.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "typescript": "~3.9.7"
   },
   "devDependencies": {
     "@angular-devkit/architect": ">= 0.900 < 0.1100",
