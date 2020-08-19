@@ -68,7 +68,7 @@ export class ProfileComponent implements OnInit {
     let headers = {
         'Cache-Control': 'no-cache',
         'Cache-Content-Type': 'application/json',
-        'authentication_token': this.Auth.getAuthenticationToken()
+        'Authentication-Token': this.Auth.getAuthenticationToken()
       }
       
     console.log(headers)
@@ -106,7 +106,7 @@ export class ProfileComponent implements OnInit {
         let headers = {
             'Cache-Control': 'no-cache',
             'Cache-Content-Type': 'application/json',
-            'authentication_token': this.Auth.getAuthenticationToken()
+            'Authentication-Token': this.Auth.getAuthenticationToken()
           }
         
         //console.log("Aggiorno info")

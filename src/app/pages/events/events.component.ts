@@ -61,7 +61,7 @@ export class EventsComponent implements OnInit {
               let headers = {
                 'Cache-Control': 'no-cache',
                 'Cache-Content-Type': 'application/json',
-                'authentication_token': this.Auth.getAuthenticationToken()
+                'Authentication-Token': this.Auth.getAuthenticationToken()
               }
               this.http.get(url+id,{headers:headers}).toPromise().then((data: any) => {
                 console.log(this.cards);

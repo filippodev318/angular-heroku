@@ -105,7 +105,7 @@ export class CreateeventComponent implements OnInit {
         let headers = {
           'Cache-Control': 'no-cache',
           'Cache-Content-Type': 'application/json',
-          'authentication_token': this.Auth.getAuthenticationToken()
+          'Authentication-Token': this.Auth.getAuthenticationToken()
         }
         
         let timeFromPicker = this.eventForm.get('time').value
