@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -59,7 +59,7 @@ import { AgmCoreModule } from '@agm/core';
       apiKey: 'AIzaSyBK6BtCSyxSSU_gwx5nYwgfy-nXmeS38Kc'
     })
   ],
-  providers: [AuthService, UploadService, DatePipe],
+  providers: [AuthService, UploadService, DatePipe, Title],
   bootstrap: [AppComponent],
   entryComponents: [DialogeventComponent]
 })

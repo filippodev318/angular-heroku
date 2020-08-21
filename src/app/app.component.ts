@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-root',
@@ -7,12 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'my-app';
+  title = 'SportAPPenz';
 
-  constructor(private router:Router){}
+  constructor(private router:Router,private titleService: Title){}
 
   ngOnInit(): void {
-    //console.log("vfhnjdcsxmkz")
+    this.titleService.setTitle( this.title );
     this.router.navigate(['home'])
   }
 
